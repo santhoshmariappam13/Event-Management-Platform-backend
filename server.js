@@ -1,20 +1,18 @@
-require('dotenv').config(); // Load environment variables from .env file
+require('dotenv').config(); 
 
 const express = require('express');
 const app = express();
 const connectDB = require('./src/config/db');
-const paymentRoutes = require('./src/routes/paymentRoutes'); // Correct path to your routes
+const paymentRoutes = require('./src/routes/paymentRoutes');
 
-// Connect to the database
 connectDB();
 
-// Middleware
-app.use(express.json()); // To handle JSON bodies
 
-// Routes
-app.use('/api', paymentRoutes); // Example: All payment routes are prefixed with /api
+app.use(express.json()); 
 
-// Your other routes and middleware go here
+
+app.use('/api', paymentRoutes); 
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
