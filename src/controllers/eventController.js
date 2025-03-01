@@ -1,6 +1,6 @@
 const Event = require('../models/Event');
 
-// Create a new event
+
 const createEvent = async (req, res) => {
   console.log(req.body)
   const { title, description, date, location, ticketPrice, image } = req.body;
@@ -13,7 +13,6 @@ const createEvent = async (req, res) => {
   }
 };
 
-// List all events
 const getAllEvents = async (req, res) => {
   try {
     const events = await Event.find();
