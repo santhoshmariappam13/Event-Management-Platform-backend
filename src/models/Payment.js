@@ -1,17 +1,17 @@
-// src/models/PaymentModel.js
+
 
 const mongoose = require('mongoose');
 
-// Define the schema for storing payment information
+
 const paymentSchema = new mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',  // Reference to the User model
+        ref: 'User',  
         required: true
     },
     event: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Event',  // Reference to the Event model
+        ref: 'Event',  
         required: true
     },
     amount: {
@@ -21,7 +21,7 @@ const paymentSchema = new mongoose.Schema({
     },
     paymentMethod: {
         type: String,
-        required: true,  // e.g., "card", "paypal", etc.
+        required: true, 
     },
     paymentStatus: {
         type: String,
@@ -30,10 +30,10 @@ const paymentSchema = new mongoose.Schema({
     },
     paymentIntentId: {
         type: String,
-        required: true  // Store Stripe Payment Intent ID here
+        required: true 
     },
     transactionId: {
-        type: String,  // Optional: transaction ID from the payment gateway
+        type: String,  
     },
     createdAt: {
         type: Date,
