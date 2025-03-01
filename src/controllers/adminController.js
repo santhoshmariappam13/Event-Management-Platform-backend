@@ -1,7 +1,7 @@
 const Event = require('../models/Event');
 const User = require('../models/UserModel');
 
-// Admin: Manage all events
+
 const getAllUsers = async (req, res) => {
   try {
     const users = await User.find();
@@ -11,7 +11,7 @@ const getAllUsers = async (req, res) => {
   }
 };
 
-// Admin: Approve event
+
 const approveEvent = async (req, res) => {
   const { eventId } = req.params;
   try {
