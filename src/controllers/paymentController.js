@@ -1,4 +1,4 @@
-// /src/controllers/paymentController.js
+
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const Event = require('../models/Event');
 
