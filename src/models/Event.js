@@ -7,7 +7,7 @@ const eventSchema = new mongoose.Schema({
   location: { type: String, required: true },
   ticketPrice: { type: Number, required: true },
   image: { type: String },
-  status: { type: String, default: 'pending' }, // 'pending' | 'approved' | 'rejected'
+  status: { type: String, default: 'pending' }, 
 });
 
 module.exports = mongoose.model('Event', eventSchema);
